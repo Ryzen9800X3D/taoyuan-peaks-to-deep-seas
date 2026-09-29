@@ -3,185 +3,300 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>桃園兩天一夜全攻略：從千年巨木到都會深海</title>
-<meta name="description" content="桃園兩天一夜旅遊攻略：從拉拉山千年紅檜巨木到 Xpark 都會深海，2026 最新校正版。">
+<title>【桃園 2 天 1 夜全攻略】拉拉山巨木森林浴 × 北橫秘境 × 龍潭美食與青埔時尚之旅</title>
+<meta name="description" content="桃園 2 天 1 夜全攻略：拉拉山巨木森林浴、北橫秘境、龍潭甕缸雞與青埔 Xpark 水族館、Outlet 購物饗宴。">
 <style>
 :root{
-  --bg:#0b1420; --bg2:#0f1d2e; --ink:#eef4fa; --muted:#9fb3c8;
-  --green:#37c98a; --blue:#3aa0ff; --amber:#f5b544;
-  --line:rgba(255,255,255,.10); --card:rgba(255,255,255,.05);
-  --maxw:1180px;
+  --bg:#f2f7fd; --ink:#14324f; --muted:#5b7590;
+  --green:#2e9bd6; --blue:#2563eb; --amber:#1d4ed8;
+  --line:rgba(30,64,175,.14); --card:#ffffff;
+  --maxw:1080px;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 html,body{margin:0;padding:0}
 body{
-  background:radial-gradient(1200px 600px at 50% -10%, #12283f 0%, var(--bg) 60%);
+  background:
+    radial-gradient(1000px 520px at 12% -5%, rgba(37,99,235,.08) 0%, transparent 60%),
+    radial-gradient(1000px 520px at 88% -5%, rgba(58,160,255,.10) 0%, transparent 60%),
+    var(--bg);
   color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK TC","Noto Sans TC",Microsoft JhengHei,Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased; line-height:1.6;
+  -webkit-font-smoothing:antialiased;line-height:1.75;
 }
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px 80px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
 
-/* Top bar */
-.topbar{
-  position:sticky;top:0;z-index:20;
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  background:linear-gradient(to bottom, rgba(11,20,32,.92), rgba(11,20,32,.72));
-  border-bottom:1px solid var(--line);
-}
-.topbar .inner{max-width:var(--maxw);margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:14px}
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(to bottom,rgba(255,255,255,.96),rgba(255,255,255,.82));border-bottom:1px solid var(--line)}
+.nav .inner{max-width:var(--maxw);margin:0 auto;padding:11px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-.brand .dot{width:12px;height:12px;border-radius:50%;background:conic-gradient(from 0deg,var(--green),var(--blue),var(--green));box-shadow:0 0 12px rgba(58,160,255,.6)}
-.brand small{color:var(--muted);font-weight:500;display:block;font-size:11px;letter-spacing:.5px}
-.seg{margin-left:auto;display:flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
-.seg button{border:0;background:transparent;color:var(--muted);padding:7px 14px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13px;transition:.2s}
-.seg button.on{background:linear-gradient(90deg,#173a5a,#123550);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:conic-gradient(from 0deg,#2563eb,#60a5fa,#2563eb);box-shadow:0 0 12px rgba(58,160,255,.6)}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.nav .links{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nav .links a{color:#1e3a5f;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.nav .links a:hover{background:#cfe0fb;text-decoration:none}
 
-/* Hero */
-.hero{padding:34px 0 20px;text-align:center}
-.hero h1{margin:0 0 10px;font-size:clamp(24px,4.4vw,42px);line-height:1.25;font-weight:800}
+/* ===== Hero ===== */
+.hero{padding:46px 0 26px;text-align:center}
+.hero h1{margin:0 0 14px;font-size:clamp(24px,4.2vw,40px);line-height:1.3;font-weight:800}
 .hero h1 .g{color:var(--green)} .hero h1 .b{color:var(--blue)}
-.hero .sub{color:var(--muted);font-size:clamp(13px,1.6vw,16px)}
-.hero .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.hero .tags span{background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12.5px;color:#cfe0f2}
+.hero .sub{color:var(--muted);font-size:clamp(14px,1.8vw,17px);max-width:780px;margin:0 auto}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.badges span{background:var(--card);border:1px solid var(--line);padding:6px 13px;border-radius:999px;font-size:13px;color:#1e3a5f}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;transition:.2s;border:1px solid var(--line);text-decoration:none}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(90deg,#2563eb,#1d4ed8);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.20)}
+.btn.ghost{background:var(--card);color:#14324f}
 
-/* Deck */
-.stage{position:relative;margin-top:8px;border-radius:18px;overflow:hidden;
-  border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.45);background:#000}
-.slide{display:none;width:100%;animation:fade .35s ease}
-.slide.on{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.slide img{display:block;width:100%;height:auto}
-.stage .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;font-size:13px;color:#fff;
-  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);pointer-events:none}
+/* ===== Sections ===== */
+section{padding:30px 0 8px;scroll-margin-top:64px}
+.sec-head{margin-bottom:6px}
+.sec-head .kicker{font-size:12px;letter-spacing:2px;color:var(--muted);font-weight:700;text-transform:uppercase}
+.sec-head h2{margin:4px 0 6px;font-size:clamp(20px,3vw,28px);font-weight:800}
+.sec-head .sum{color:var(--muted);font-size:14.5px;margin:0}
+.day-pill{display:inline-block;font-size:12px;font-weight:800;padding:3px 12px;border-radius:999px;margin-bottom:10px;letter-spacing:1px}
+.day-pill.d1{background:rgba(37,99,235,.10);color:var(--green);border:1px solid rgba(37,99,235,.35)}
+.day-pill.d2{background:rgba(58,160,255,.16);color:var(--blue);border:1px solid rgba(58,160,255,.4)}
+.day-cta{margin:14px 0 4px}
 
-/* Controls */
-.ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0 6px}
-.ctrl button{border:1px solid var(--line);background:var(--card);color:#fff;width:46px;height:46px;border-radius:12px;font-size:20px;cursor:pointer;transition:.2s;display:grid;place-items:center}
-.ctrl button:hover{background:#173a5a;transform:translateY(-1px)}
-.ctrl .count{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;min-width:64px;text-align:center}
+/* ===== Timeline ===== */
+.timeline{list-style:none;margin:18px 0 0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:135px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--green),var(--blue))}
+.t-item{position:relative;padding:0 0 16px 168px;margin:0}
+.t-item .time{position:absolute;left:0;top:2px;width:112px;text-align:right;font-variant-numeric:tabular-nums;font-weight:800;font-size:13.5px;color:#1d4ed8}
+.t-item .node{position:absolute;left:128px;top:8px;width:16px;height:16px;border-radius:50%;background:#ffffff;border:3px solid #2563eb;box-shadow:0 0 0 4px rgba(37,99,235,.12);z-index:1}
+.t-item.travel .node{border-color:#93b4d8;box-shadow:0 0 0 4px rgba(147,180,216,.20)}
+.t-item .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;transition:.2s}
+.t-item:hover .card{border-color:rgba(37,99,235,.35);transform:translateX(2px)}
+.t-item .card h3{margin:0 0 4px;font-size:16px;display:flex;gap:8px;align-items:flex-start}
+.t-item .card p{margin:0;color:var(--muted);font-size:14px}
+.t-item.travel .card{opacity:.82}
+.t-item.travel .card h3{font-size:14.5px;color:#3a5a7d}
+@media (max-width:640px){
+  .timeline::before{left:9px}
+  .t-item{padding:0 0 14px 34px}
+  .t-item .time{position:static;width:auto;text-align:left;display:block;font-size:12.5px;margin-bottom:2px}
+  .t-item .node{left:2px;top:4px;width:14px;height:14px}
+}
 
-/* Filmstrip */
-.strip{display:flex;gap:10px;overflow-x:auto;padding:14px 2px;scroll-snap-type:x mandatory}
-.strip::-webkit-scrollbar{height:8px}.strip::-webkit-scrollbar-thumb{background:#244; border-radius:8px}
-.strip .th{flex:0 0 auto;width:132px;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;scroll-snap-align:start;position:relative;background:#000}
-.strip .th img{width:100%;height:74px;object-fit:cover;display:block}
-.strip .th .n{position:absolute;top:4px;left:6px;font-size:11px;font-weight:800;color:#fff;text-shadow:0 1px 3px #000}
-.strip .th.on{border-color:var(--green);box-shadow:0 0 0 2px rgba(55,201,138,.35)}
+/* ===== Highlights ===== */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s}
+.hl:hover{transform:translateY(-3px);border-color:rgba(58,160,255,.4)}
+.hl .ic{font-size:26px}
+.hl h3{margin:10px 0 8px;font-size:17px}
+.hl p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags b{background:#e3edfd;border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12px;color:#1e3a5f;font-weight:600}
 
-/* Text mode */
-#textMode{display:none}
-#textMode.on{display:block}
-#deckWrap.hide{display:none}
-.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:18px 0;scroll-margin-top:80px}
-.block h2{margin:0 0 6px;font-size:20px;display:flex;align-items:center;gap:10px}
-.block .pg{font-size:12px;color:var(--muted);font-weight:700;background:#123550;border:1px solid var(--line);padding:2px 9px;border-radius:999px}
-.block h3{font-size:15px;color:var(--green);margin:16px 0 6px}
-.block ul{margin:6px 0;padding-left:20px}
-.block li{margin:5px 0}
-.block .row{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.block .row:last-child{border-bottom:0}
-.block .t{flex:0 0 84px;color:var(--amber);font-weight:800;font-variant-numeric:tabular-nums}
-.block .d{flex:1}
-.kv{display:grid;grid-template-columns:150px 1fr;gap:8px 14px}
-.kv .k{color:var(--muted)} .kv .v{color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.chips b{background:#123550;border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12.5px;color:#cfe0f2;font-weight:600}
-.note{color:var(--muted);font-size:13px;margin-top:8px}
+/* ===== Locations ===== */
+.loc{margin-top:16px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.loc .row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.loc .row:last-child{border-bottom:0}
+.loc .row:hover{background:rgba(255,255,255,.03)}
+.cat{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px}
+.cat.spot{background:rgba(37,99,235,.10);color:var(--green)}
+.cat.rest{background:rgba(58,160,255,.16);color:var(--blue)}
+.cat.stay{background:rgba(245,181,68,.16);color:#1d4ed8}
+.cat.food{background:rgba(14,116,144,.12);color:#0e7490}
+.loc .nm{font-weight:700;font-size:14.5px;flex:1 1 220px}
+.loc .addr{color:var(--muted);font-size:13px;flex:1 1 260px}
+.loc .go{flex:0 0 auto;background:#e3edfd;border:1px solid var(--line);color:#1e3a5f;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px}
+.loc .go:hover{background:#b6d0f7;text-decoration:none}
 
-footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:30px}
-a{color:var(--blue)}
+/* ===== Tips ===== */
+details.tip{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:12px;padding:0}
+details.tip summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:700;font-size:15px;display:flex;gap:10px;align-items:center}
+details.tip summary::-webkit-details-marker{display:none}
+details.tip summary::after{content:"＋";margin-left:auto;color:var(--muted);font-weight:800}
+details.tip[open] summary::after{content:"－"}
+details.tip .body{padding:0 18px 16px;color:var(--muted);font-size:14.5px}
+details.tip .body b{color:var(--ink)}
+
+footer{text-align:center;color:var(--muted);font-size:12.5px;padding:34px 18px 40px}
+footer a{color:var(--blue)}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="inner">
-  <div class="brand"><div class="dot"></div><div>Peaks to Deep Seas<small>桃園兩天一夜全攻略</small></div></div>
-  <div class="seg">
-    <button class="on">📑 簡報</button>
-    <a href="content.html" style="text-decoration:none;color:#cfe0f2;font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px;display:inline-block">📝 全文</a>
+
+<nav class="nav"><div class="inner">
+  <div class="brand"><div class="dot"></div><div>Peaks to Deep Seas<small>桃園 2 天 1 夜全攻略</small></div></div>
+  <div class="links">
+    <a href="#day1">Day 1</a>
+    <a href="#day2">Day 2</a>
+    <a href="#highlights">亮點</a>
+    <a href="#locations">導航</a>
+    <a href="#tips">貼士</a>
+    <a href="deck.html">📑 原簡報</a>
   </div>
-</div></div>
+</div></nav>
 
 <div class="wrap">
-  <div class="hero">
-    <h1>桃園兩天一夜全攻略：<span class="g">從千年巨木</span>到<span class="b">都會深海</span></h1>
-    <div class="sub">2026 最新校正版｜拉拉山 O 型環線 × 龍潭發中發 × 青埔都會行</div>
-    <div class="tags">
-      <span>Day 1 山林秘境</span><span>Day 2 都會深海</span><span>共 14 頁</span>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <h1>【桃園 2 天 1 夜全攻略】<span class="g">拉拉山巨木森林浴</span> × 北橫秘境 × <span class="b">龍潭美食與青埔時尚之旅</span></h1>
+  <p class="sub">從海拔 1,500 公尺的千年紅檜雲霧森林，一路玩到青埔都會水族館與 Outlet 購物饗宴！</p>
+  <div class="badges">
+    <span>🌲 自然森林浴</span><span>☁️ 高山雲海</span><span>♨️ 溫泉泡腳</span><span>🍗 在地美食</span><span>👨‍👩‍👧 親子/全家適宜</span>
+  </div>
+  <div class="cta">
+    <a class="btn primary" id="gmapsAll" target="_blank" rel="noopener">🗺 一鍵匯入 Google 地圖導航</a>
+    <a class="btn ghost" href="taoyuan-peaks-to-deep-seas.pdf" target="_blank" rel="noopener">📥 下載完整行程簡報</a>
+  </div>
+</header>
+
+<!-- ===== DAY 1 ===== -->
+<section id="day1">
+  <span class="day-pill d1">DAY 1</span>
+  <div class="sec-head">
+    <h2>森林芬多精與北橫山水風光</h2>
+    <p class="sum">上山朝聖千年巨木，下山享受免費溫泉泡腳與香噴噴的甕缸雞晚餐。</p>
+  </div>
+  <div class="day-cta"><a class="btn ghost" id="gmapsD1" target="_blank" rel="noopener">🗺 Day 1 一鍵導航</a></div>
+  <ol class="timeline">
+    <li class="t-item travel"><span class="time">07:00–09:30</span><span class="node"></span>
+      <div class="card"><h3>🚗 開車前往拉拉山國家森林遊樂區</h3><p>車程約 2.5 小時，建議 09:30 前抵達以利順利停車與避開管制。</p></div></li>
+    <li class="t-item"><span class="time">09:30–12:00</span><span class="node"></span>
+      <div class="card"><h3>🌲 拉拉山巨木群步道（精華 O 型環線）</h3><p>全程 3.7~4 公里（約 2.5 小時）。順行路線：1~4 號巨木 ➔ 5 號狗熊之窩 ➔ 9 號扁柏 ➔ 最高點達觀亭 ➔ 18 號連體巨木。</p></div></li>
+    <li class="t-item"><span class="time">12:00–13:00</span><span class="node"></span>
+      <div class="card"><h3>☕️ 拉拉山遊客中心 ＆ Balong Cafe</h3><p>午餐輕食與觀景（1 小時）。參觀 3 樓泰雅文化展，於 2 樓 Balong Cafe 喝咖啡享用輕食，遠眺高山雲海。</p></div></li>
+    <li class="t-item travel"><span class="time">13:00–13:30</span><span class="node"></span>
+      <div class="card"><h3>🚗 山路車程：上巴陵 ➔ 下巴陵</h3><p>車程約 25–30 分鐘，沿台 7 線下山。</p></div></li>
+    <li class="t-item"><span class="time">13:30–14:15</span><span class="node"></span>
+      <div class="card"><h3>🌉 巴陵舊橋與巴陵吊橋</h3><p>停留 45 分鐘。漫步火紅鋼構吊橋，穿越巴陵隧道欣賞泰雅原民藝術壁畫與壯麗溪谷景致。</p></div></li>
+    <li class="t-item travel"><span class="time">14:15–15:00</span><span class="node"></span>
+      <div class="card"><h3>🚗 台 7 線車程：下巴陵 ➔ 羅浮</h3><p>車程約 40–45 分鐘。</p></div></li>
+    <li class="t-item"><span class="time">15:00–15:45</span><span class="node"></span>
+      <div class="card"><h3>♨️ 羅浮溫泉公園</h3><p>停留 45 分鐘。體驗戶外免費溫泉泡腳池，舒緩健行後的雙腿肌肉。</p></div></li>
+    <li class="t-item travel"><span class="time">15:45–16:30</span><span class="node"></span>
+      <div class="card"><h3>🚗 車程：羅浮 ➔ 龍潭</h3><p>車程約 40–45 分鐘，前往龍潭韋廷家。</p></div></li>
+    <li class="t-item"><span class="time">16:30–17:30</span><span class="node"></span>
+      <div class="card"><h3>🏠 龍潭韋廷家 Check-in 與休息</h3><p>辦理入住、卸下行李與稍作洗漱休息。</p></div></li>
+    <li class="t-item"><span class="time">17:30–19:30</span><span class="node"></span>
+      <div class="card"><h3>🍗 晚餐：龍潭發中發甕缸雞</h3><p>地道美食饗宴。享用皮酥肉嫩多汁的現烤甕缸雞、雞油麵線與客家熱炒料理。</p></div></li>
+  </ol>
+</section>
+
+<!-- ===== DAY 2 ===== -->
+<section id="day2">
+  <span class="day-pill d2">DAY 2</span>
+  <div class="sec-head">
+    <h2>青埔都會水族與 Outlet 購物</h2>
+    <p class="sum">感受當代都會水族館的夢幻氛圍，並在露天 Outlet 享受美食與購物樂趣。</p>
+  </div>
+  <div class="day-cta"><a class="btn ghost" id="gmapsD2" target="_blank" rel="noopener">🗺 Day 2 一鍵導航</a></div>
+  <ol class="timeline">
+    <li class="t-item travel"><span class="time">09:30–10:00</span><span class="node"></span>
+      <div class="card"><h3>🚗 車程：龍潭 ➔ 青埔</h3><p>車程約 20–25 分鐘。</p></div></li>
+    <li class="t-item"><span class="time">10:00–13:00</span><span class="node"></span>
+      <div class="card"><h3>🐟 Xpark 都會型水生公園</h3><p>停留 3 小時。探索福爾摩沙大水槽、夢幻水母展區與可愛企鵝區（建議事先線上預約場次門票）。</p></div></li>
+    <li class="t-item"><span class="time">13:00–16:30</span><span class="node"></span>
+      <div class="card"><h3>🛍 華泰名品城 (GLORIA OUTLETS)</h3><p>停留 3.5 小時。美式露天 Outlet 購物、享用豐盛午餐與輕鬆血拼。</p></div></li>
+    <li class="t-item"><span class="time">16:30 後</span><span class="node"></span>
+      <div class="card"><h3>🚘 美好賦歸</h3><p>帶著滿載的回憶與戰利品平安返家！</p></div></li>
+  </ol>
+</section>
+
+<!-- ===== HIGHLIGHTS ===== -->
+<section id="highlights">
+  <div class="sec-head">
+    <div class="kicker">Feature Highlights</div>
+    <h2>精選亮點</h2>
+  </div>
+  <div class="grid2">
+    <div class="hl"><span class="ic">🌲</span>
+      <h3>拉拉山巨木群精華 O 型環線</h3>
+      <p>徜徉在全台最大面積的紅檜原始林，漫步平緩高架木棧道。走訪 2,800 年樹齡的「5 號狗熊之窩」、珍貴少見的「9 號台灣扁柏」，並在全區最高點「達觀亭」感受高濃度負離子與芬多精。</p>
+      <div class="tags"><b>海拔1500m</b><b>負離子爆棚</b><b>千年神木</b></div>
+    </div>
+    <div class="hl"><span class="ic">☕️</span>
+      <h3>拉拉山遊客中心 Balong Cafe</h3>
+      <p>全新改建的 4 層樓溫暖建築，設有無障礙電梯。2 樓 Balong Cafe 擁有大面落地窗景，可以邊品嚐熱飲與輕食，邊欣賞雲霧繚繞的山谷景色；3 樓更有展覽可深入了解泰雅族文化。</p>
+      <div class="tags"><b>無敵景觀</b><b>山林咖啡</b><b>泰雅文化</b></div>
+    </div>
+    <div class="hl"><span class="ic">♨️</span>
+      <h3>羅浮溫泉泡腳池</h3>
+      <p>位於北橫公路上的溫泉小鎮，提供免費的戶外溫泉泡腳池。山路健行後將雙腳浸泡在溫熱的碳酸氫鈉泉中，能及時釋放肌肉緊繃與疲勞。</p>
+      <div class="tags"><b>免費泡腳</b><b>碳酸氫鈉泉</b><b>舒緩放鬆</b></div>
+    </div>
+    <div class="hl"><span class="ic">🍗</span>
+      <h3>龍潭發中發甕缸雞</h3>
+      <p>龍潭在地口碑極佳的聚餐首選！現烤黑羽土雞外皮金黃酥脆、肉質多汁鮮甜，搭配沾取精華雞油的熱騰騰麵線與鮮甜脆筍湯，滿足全家人的味蕾。</p>
+      <div class="tags"><b>龍潭美食</b><b>皮酥肉嫩</b><b>聚餐首選</b></div>
     </div>
   </div>
+</section>
 
-  <!-- DECK MODE -->
-  <div id="deckWrap">
-    <div class="stage" id="stage"></div>
-    <div class="ctrl">
-      <button onclick="go(cur-1)" aria-label="上一頁">‹</button>
-      <div class="count"><span id="curN">1</span> / 14</div>
-      <button onclick="go(cur+1)" aria-label="下一頁">›</button>
-    </div>
-    <div class="strip" id="strip"></div>
+<!-- ===== LOCATIONS ===== -->
+<section id="locations">
+  <div class="sec-head">
+    <div class="kicker">Navigation Hub</div>
+    <h2>📍 景點與餐廳 Google 地圖導航清單</h2>
   </div>
+  <div class="loc" id="locList"></div>
+</section>
 
-  <!-- TEXT page lives in content.html -->
+<!-- ===== TIPS ===== -->
+<section id="tips">
+  <div class="sec-head">
+    <div class="kicker">Travel Tips</div>
+    <h2>行前貼士與注意事項</h2>
+  </div>
+  <details class="tip" open>
+    <summary>🌡 山區氣溫與穿搭建議</summary>
+    <div class="body">拉拉山海拔約 <b>1,500 公尺</b>，氣溫比平地低約 <b>8–10°C</b>。建議採用「<b>洋蔥式穿法</b>」（薄保暖衣＋輕便防風外套），並穿著抓地力好的運動鞋。</div>
+  </details>
+  <details class="tip">
+    <summary>🚗 停車與山路管制提醒</summary>
+    <div class="body">森林遊樂區園區停車位僅約 <b>78 格</b>，假日 10:00 後極易客滿並實施「<b>一出一進</b>」管制，建議提前於 <b>09:30 前</b>抵達。</div>
+  </details>
+  <details class="tip">
+    <summary>🎟 Xpark 門票預購</summary>
+    <div class="body">第二天 Xpark 人潮較多，建議提前於 <a href="https://www.kkday.com/zh-tw/search?q=Xpark" target="_blank" rel="noopener">KKday</a> 或 <a href="https://www.klook.com/zh-tw/search?q=Xpark%20%E4%B8%AD%E5%A1%9E" target="_blank" rel="noopener">Klook</a> 線上平台購妥指定場次之預約門票，節省現場排隊時間。</div>
+  </details>
+</section>
 
-  <footer>© Taoyuan Peaks to Deep Seas · 2026 · 由 14 頁簡報 PDF 製成互動網頁</footer>
+<footer>【桃園 2 天 1 夜全攻略】Peaks to Deep Seas · 2026 · <a href="deck.html">查看 14 頁原始簡報 →</a></footer>
 </div>
 
 <script>
-const N=14;
-const caps=[
- "",
- "Day 1 / Day 2 主題對比：山林秘境 vs 都會深海",
- "高海拔穿搭法則 + 行車生存指南",
- "Day 1 山形時間軸（07:00–17:30）",
- "拉拉山巨木步道 O 型環線導覽圖",
- "森呼吸與雲海午餐（Balong Cafe）",
- "北橫精華順遊：巴陵吊橋 + 羅浮溫泉",
- "龍潭歸宿與頂級饗宴（韋廷家 / 發中發甕缸雞）",
- "Day 2 都會生活誌：深海奇境與購物饗宴",
- "Xpark 都會型水生公園（三大展區）",
- "華泰名品城 GLORIA OUTLETS 購物饗宴",
- "Day 1 導航金鑰（Navigation Hub）",
- "Day 2 導航金鑰（Navigation Hub）",
- "兩日雙城，心滿意足（結尾）"
+// ---- Google Maps multi-stop routing ----
+function gmapsDir(stops){
+  return "https://www.google.com/maps/dir/" + stops.map(encodeURIComponent).join("/");
+}
+var D1=["桃園市復興區華陵里13鄰巴崚205號","巴陵吊橋","桃園市復興區羅浮里5鄰140號","桃園市龍潭區 韋廷家","桃園市龍潭區 發中發甕缸雞"];
+var D2=["桃園市中壢區春德路105號","桃園市中壢區春德路189號"];
+document.getElementById("gmapsAll").href=gmapsDir(D1.concat(D2));
+document.getElementById("gmapsD1").href=gmapsDir(D1);
+document.getElementById("gmapsD2").href=gmapsDir(D2);
+
+// ---- Location list ----
+var LOCS=[
+ ["spot","景點","拉拉山國家森林遊樂區","桃園市復興區華陵里13鄰巴崚205號"],
+ ["rest","休憩","拉拉山遊客中心 (Balong Cafe)","桃園市復興區華陵里巴陵207號"],
+ ["spot","景點","巴陵舊橋 / 巴陵吊橋","桃園市復興區台7線46.8K處（下巴陵）"],
+ ["spot","景點","羅浮溫泉公園","桃園市復興區羅浮里5鄰140號"],
+ ["stay","住宿","龍潭韋廷家","桃園市龍潭區"],
+ ["food","美食","龍潭發中發甕缸雞","桃園市龍潭區"],
+ ["spot","景點","Xpark 都會型水生公園","桃園市中壢區春德路105號"],
+ ["shop","購物","華泰名品城 (GLORIA OUTLETS)","桃園市中壢區春德路189號"]
 ];
-
-// build deck
-const stage=document.getElementById('stage');
-const strip=document.getElementById('strip');
-for(let i=1;i<=N;i++){
-  const s=document.createElement('div');s.className='slide';s.id='s'+i;
-  s.innerHTML=`<img src="images/p${String(i).padStart(2,'0')}.jpg" alt="第 ${i} 頁" loading="${i<=2?'eager':'lazy'}">
-    <div class="cap">第 ${i} 頁 — ${caps[i-1]}</div>`;
-  stage.appendChild(s);
-  const th=document.createElement('div');th.className='th';th.id='th'+i;
-  th.innerHTML=`<img src="images/p${String(i).padStart(2,'0')}.jpg" alt="" loading="lazy"><span class="n">${i}</span>`;
-  th.onclick=()=>go(i);strip.appendChild(th);
-}
-let cur=1;
-function go(n){
-  n=Math.max(1,Math.min(N,n));cur=n;
-  document.querySelectorAll('.slide').forEach(x=>x.classList.remove('on'));
-  document.querySelectorAll('.th').forEach(x=>x.classList.remove('on'));
-  document.getElementById('s'+n).classList.add('on');
-  document.getElementById('th'+n).classList.add('on');
-  document.getElementById('curN').textContent=n;
-  document.getElementById('th'+n).scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
-  location.hash='p'+n;
-}
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(cur+1);
-  if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);
-  if(e.key==='Home')go(1); if(e.key==='End')go(N);
+var CATCLS={spot:"spot",rest:"rest",stay:"stay",food:"food",shop:"rest"};
+var list=document.getElementById("locList");
+LOCS.forEach(function(l){
+  var row=document.createElement("div");row.className="row";
+  row.innerHTML='<span class="cat '+CATCLS[l[0]]+'">'+l[1]+'</span>'+
+    '<span class="nm">'+l[2]+'</span>'+
+    '<span class="addr">'+l[3]+'</span>'+
+    '<a class="go" target="_blank" rel="noopener" href="'+('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(l[2]+" "+l[3]))+'">導航 →</a>';
+  list.appendChild(row);
 });
-// touch swipe
-let tx=0;
-stage.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
-stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)go(cur+(dx<0?1:-1));},{passive:true});
-
-/* init from hash */
-const h=parseInt((location.hash.match(/p(\d+)/)||[])[1]);
-go(isNaN(h)?1:h);
 </script>
 </body>
 </html>
