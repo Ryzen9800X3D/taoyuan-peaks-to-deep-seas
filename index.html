@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>桃園兩天一夜全攻略：從千年巨木到都會深海</title>
+<meta name="description" content="桃園兩天一夜旅遊攻略：從拉拉山千年紅檜巨木到 Xpark 都會深海，2026 最新校正版。">
+<style>
+:root{
+  --bg:#0b1420; --bg2:#0f1d2e; --ink:#eef4fa; --muted:#9fb3c8;
+  --green:#37c98a; --blue:#3aa0ff; --amber:#f5b544;
+  --line:rgba(255,255,255,.10); --card:rgba(255,255,255,.05);
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:radial-gradient(1200px 600px at 50% -10%, #12283f 0%, var(--bg) 60%);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK TC","Noto Sans TC",Microsoft JhengHei,Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; line-height:1.6;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px 80px}
+
+/* Top bar */
+.topbar{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(to bottom, rgba(11,20,32,.92), rgba(11,20,32,.72));
+  border-bottom:1px solid var(--line);
+}
+.topbar .inner{max-width:var(--maxw);margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:conic-gradient(from 0deg,var(--green),var(--blue),var(--green));box-shadow:0 0 12px rgba(58,160,255,.6)}
+.brand small{color:var(--muted);font-weight:500;display:block;font-size:11px;letter-spacing:.5px}
+.seg{margin-left:auto;display:flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--muted);padding:7px 14px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13px;transition:.2s}
+.seg button.on{background:linear-gradient(90deg,#173a5a,#123550);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+
+/* Hero */
+.hero{padding:34px 0 20px;text-align:center}
+.hero h1{margin:0 0 10px;font-size:clamp(24px,4.4vw,42px);line-height:1.25;font-weight:800}
+.hero h1 .g{color:var(--green)} .hero h1 .b{color:var(--blue)}
+.hero .sub{color:var(--muted);font-size:clamp(13px,1.6vw,16px)}
+.hero .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.hero .tags span{background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12.5px;color:#cfe0f2}
+
+/* Deck */
+.stage{position:relative;margin-top:8px;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.45);background:#000}
+.slide{display:none;width:100%;animation:fade .35s ease}
+.slide.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.slide img{display:block;width:100%;height:auto}
+.stage .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;font-size:13px;color:#fff;
+  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);pointer-events:none}
+
+/* Controls */
+.ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0 6px}
+.ctrl button{border:1px solid var(--line);background:var(--card);color:#fff;width:46px;height:46px;border-radius:12px;font-size:20px;cursor:pointer;transition:.2s;display:grid;place-items:center}
+.ctrl button:hover{background:#173a5a;transform:translateY(-1px)}
+.ctrl .count{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;min-width:64px;text-align:center}
+
+/* Filmstrip */
+.strip{display:flex;gap:10px;overflow-x:auto;padding:14px 2px;scroll-snap-type:x mandatory}
+.strip::-webkit-scrollbar{height:8px}.strip::-webkit-scrollbar-thumb{background:#244; border-radius:8px}
+.strip .th{flex:0 0 auto;width:132px;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;scroll-snap-align:start;position:relative;background:#000}
+.strip .th img{width:100%;height:74px;object-fit:cover;display:block}
+.strip .th .n{position:absolute;top:4px;left:6px;font-size:11px;font-weight:800;color:#fff;text-shadow:0 1px 3px #000}
+.strip .th.on{border-color:var(--green);box-shadow:0 0 0 2px rgba(55,201,138,.35)}
+
+/* Text mode */
+#textMode{display:none}
+#textMode.on{display:block}
+#deckWrap.hide{display:none}
+.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:18px 0;scroll-margin-top:80px}
+.block h2{margin:0 0 6px;font-size:20px;display:flex;align-items:center;gap:10px}
+.block .pg{font-size:12px;color:var(--muted);font-weight:700;background:#123550;border:1px solid var(--line);padding:2px 9px;border-radius:999px}
+.block h3{font-size:15px;color:var(--green);margin:16px 0 6px}
+.block ul{margin:6px 0;padding-left:20px}
+.block li{margin:5px 0}
+.block .row{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.block .row:last-child{border-bottom:0}
+.block .t{flex:0 0 84px;color:var(--amber);font-weight:800;font-variant-numeric:tabular-nums}
+.block .d{flex:1}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:8px 14px}
+.kv .k{color:var(--muted)} .kv .v{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chips b{background:#123550;border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12.5px;color:#cfe0f2;font-weight:600}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+
+footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:30px}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <div class="brand"><div class="dot"></div><div>Peaks to Deep Seas<small>桃園兩天一夜全攻略</small></div></div>
+  <div class="seg">
+    <button class="on">📑 簡報</button>
+    <a href="content.html" style="text-decoration:none;color:#cfe0f2;font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px;display:inline-block">📝 全文</a>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>桃園兩天一夜全攻略：<span class="g">從千年巨木</span>到<span class="b">都會深海</span></h1>
+    <div class="sub">2026 最新校正版｜拉拉山 O 型環線 × 龍潭發中發 × 青埔都會行</div>
+    <div class="tags">
+      <span>Day 1 山林秘境</span><span>Day 2 都會深海</span><span>共 14 頁</span>
+    </div>
+  </div>
+
+  <!-- DECK MODE -->
+  <div id="deckWrap">
+    <div class="stage" id="stage"></div>
+    <div class="ctrl">
+      <button onclick="go(cur-1)" aria-label="上一頁">‹</button>
+      <div class="count"><span id="curN">1</span> / 14</div>
+      <button onclick="go(cur+1)" aria-label="下一頁">›</button>
+    </div>
+    <div class="strip" id="strip"></div>
+  </div>
+
+  <!-- TEXT page lives in content.html -->
+
+  <footer>© Taoyuan Peaks to Deep Seas · 2026 · 由 14 頁簡報 PDF 製成互動網頁</footer>
+</div>
+
+<script>
+const N=14;
+const caps=[
+ "",
+ "Day 1 / Day 2 主題對比：山林秘境 vs 都會深海",
+ "高海拔穿搭法則 + 行車生存指南",
+ "Day 1 山形時間軸（07:00–17:30）",
+ "拉拉山巨木步道 O 型環線導覽圖",
+ "森呼吸與雲海午餐（Balong Cafe）",
+ "北橫精華順遊：巴陵吊橋 + 羅浮溫泉",
+ "龍潭歸宿與頂級饗宴（韋廷家 / 發中發甕缸雞）",
+ "Day 2 都會生活誌：深海奇境與購物饗宴",
+ "Xpark 都會型水生公園（三大展區）",
+ "華泰名品城 GLORIA OUTLETS 購物饗宴",
+ "Day 1 導航金鑰（Navigation Hub）",
+ "Day 2 導航金鑰（Navigation Hub）",
+ "兩日雙城，心滿意足（結尾）"
+];
+
+// build deck
+const stage=document.getElementById('stage');
+const strip=document.getElementById('strip');
+for(let i=1;i<=N;i++){
+  const s=document.createElement('div');s.className='slide';s.id='s'+i;
+  s.innerHTML=`<img src="images/p${String(i).padStart(2,'0')}.jpg" alt="第 ${i} 頁" loading="${i<=2?'eager':'lazy'}">
+    <div class="cap">第 ${i} 頁 — ${caps[i-1]}</div>`;
+  stage.appendChild(s);
+  const th=document.createElement('div');th.className='th';th.id='th'+i;
+  th.innerHTML=`<img src="images/p${String(i).padStart(2,'0')}.jpg" alt="" loading="lazy"><span class="n">${i}</span>`;
+  th.onclick=()=>go(i);strip.appendChild(th);
+}
+let cur=1;
+function go(n){
+  n=Math.max(1,Math.min(N,n));cur=n;
+  document.querySelectorAll('.slide').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.th').forEach(x=>x.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.getElementById('th'+n).classList.add('on');
+  document.getElementById('curN').textContent=n;
+  document.getElementById('th'+n).scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+  location.hash='p'+n;
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);
+  if(e.key==='Home')go(1); if(e.key==='End')go(N);
+});
+// touch swipe
+let tx=0;
+stage.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)go(cur+(dx<0?1:-1));},{passive:true});
+
+/* init from hash */
+const h=parseInt((location.hash.match(/p(\d+)/)||[])[1]);
+go(isNaN(h)?1:h);
+</script>
+</body>
+</html>
