@@ -270,7 +270,7 @@ footer a{color:var(--blue)}
 function gmapsDir(stops){
   return "https://www.google.com/maps/dir/" + stops.map(encodeURIComponent).join("/");
 }
-var HOME="桃園市龍潭區佳安里文化路1095號325";
+var HOME="桃園市龍潭區佳安里文化路1095號";
 var D1=[HOME,"桃園市復興區華陵里13鄰巴崚205號","巴陵吊橋","桃園市復興區羅浮里5鄰140號","韋廷家","桃園市龍潭區 發中發甕缸雞"];
 var D2=[HOME,"桃園市中壢區春德路105號","桃園市中壢區春德路189號"];
 document.getElementById("gmapsAll").href=gmapsDir([HOME].concat(D1.slice(1),D2.slice(1)));
@@ -283,7 +283,7 @@ var LOCS=[
  ["rest","休憩","拉拉山遊客中心 (Balong Cafe)","桃園市復興區華陵里巴陵207號"],
  ["spot","景點","巴陵舊橋 / 巴陵吊橋","桃園市復興區台7線46.8K處（下巴陵）"],
  ["spot","景點","羅浮溫泉公園","桃園市復興區羅浮里5鄰140號"],
- ["stay","住宿","龍潭韋廷家","桃園市龍潭區佳安里文化路1095號325"],
+ ["stay","住宿","龍潭韋廷家","桃園市龍潭區佳安里文化路1095號"],
  ["food","美食","龍潭發中發甕缸雞","桃園市龍潭區"],
  ["spot","景點","Xpark 都會型水生公園","桃園市中壢區春德路105號"],
  ["shop","購物","華泰名品城 (GLORIA OUTLETS)","桃園市中壢區春德路189號"]
